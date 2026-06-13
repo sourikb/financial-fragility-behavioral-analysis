@@ -44,6 +44,16 @@ predictive power.
 - Capstone relevance: Both binary and continuous outcome variables 
   will be modeled in parallel.
 
+### Mean Imputation Collapses Variance
+Replacing missing values with the column mean preserves sample size 
+but eliminates real variation in the data. The imputed values cluster 
+artificially at the central tendency, which can flip classifications 
+and bias regression estimates.
+- Example: A truly low-income household imputed with the sample mean 
+  income appears financially healthier than it is.
+- Capstone relevance: Mean imputation will not be used naively in 
+  the SCF analysis. Multiple imputation or model-based imputation 
+  will be considered when missingness is substantial.
 ---
 
 ## Economic and Structural Mechanisms
@@ -69,7 +79,16 @@ Static income measures miss the variance and reliability of income
 flows, which matter as much as level.
 - Capstone relevance: The SCF includes income volatility proxies. 
   These must be incorporated.
-
+  
+### Selection Bias in Missingness
+Non-response is rarely random. Households who refuse to disclose 
+income, assets, or debt often differ systematically from those who 
+respond. Imputing their values with the responder mean assumes 
+they are average when they are typically not.
+- Example: Very high-income or very low-income households are more 
+  likely to refuse income disclosure than middle-income households.
+- Capstone relevance: SCF imputation strategies must explicitly 
+  consider the structure of who is missing, not just how many.
 ---
 
 ## Behavioral and Psychological Mechanisms
@@ -96,6 +115,19 @@ and risk perception.
   very different actual fragility based on unobserved social and 
   community support.
 
+### Missing Not at Random (MNAR) from Behavioral Causes
+The very act of skipping a survey question can be driven by the 
+outcome being studied. Households experiencing financial distress, 
+shame around debt, low financial literacy, or cognitive overload 
+are more likely to leave key fields blank. This means missingness 
+is itself a signal of fragility.
+- Example: Households with high credit card debt may underreport 
+  or skip debt disclosure due to shame; households in financial 
+  crisis may be too cognitively overloaded to complete detailed 
+  asset breakdowns.
+- Capstone relevance: The SCF fragility analysis must treat 
+  missingness in debt and asset variables as potentially 
+  informative, not as a nuisance to be removed.
 ---
 
 ## Status
