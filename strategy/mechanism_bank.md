@@ -55,6 +55,20 @@ and bias regression estimates.
   the SCF analysis. Multiple imputation or model-based imputation 
   will be considered when missingness is substantial.
 ---
+### Correlation Is Not Causation
+A visible association between two variables (in a scatterplot, 
+correlation coefficient, or regression) does not establish that one 
+causes the other. Three competing explanations always remain:
+1. Reverse causation — Y may cause X rather than X causing Y
+2. Omitted variables — a third factor Z may drive both X and Y
+3. Selection — the sample itself may be non-random
+
+- Example: A negative scatterplot relationship between income and 
+  debt may reflect income reducing debt, debt reducing earning 
+  capacity, or financial literacy driving both.
+- Capstone relevance: Every visible relationship in the SCF analysis 
+  will be flagged as associational unless a causal identification 
+  strategy (IV, DiD, RD, natural experiment) is explicitly applied.
 
 ## Economic and Structural Mechanisms
 
