@@ -70,6 +70,24 @@ causes the other. Three competing explanations always remain:
   will be flagged as associational unless a causal identification 
   strategy (IV, DiD, RD, natural experiment) is explicitly applied.
 
+### Shape of Relationships in Grouped Data
+Aggregate statistics across groups can mask important patterns. A 
+relationship may appear monotonic in summary but contain plateaus, 
+non-linearities, or reversals at finer levels. The shape itself often 
+reveals more than the average.
+- Strictly monotonic: outcome changes consistently in one direction
+- Weakly monotonic: outcome moves in one direction but contains 
+  plateaus or repetitions
+- Non-monotonic: outcome reverses direction (U-shaped, inverted-U, 
+  threshold effects)
+- Example: Mean debt declines from high-school to college households 
+  but plateaus from college to graduate households, suggesting a 
+  behavioral or structural threshold has been crossed.
+- Capstone relevance: All grouped statistics in the SCF analysis must 
+  be reported with their full shape across groups, not just direction 
+  of effect. Plateaus and non-monotonic patterns will be flagged 
+  explicitly as candidates for mechanism-based explanation.
+
 ## Economic and Structural Mechanisms
 
 ### Endogeneity
@@ -104,7 +122,18 @@ they are average when they are typically not.
 - Capstone relevance: SCF imputation strategies must explicitly 
   consider the structure of who is missing, not just how many.
 ---
-
+### Small Subgroup Distortions
+Group statistics computed on small subgroups carry large standard 
+errors and are easily distorted by individual observations. The 
+smaller the group, the less the group statistic should be trusted.
+- Example: A "graduate" group with only 2 households produces a mean 
+  that is essentially the average of two observations; one unusual 
+  household shifts the entire group statistic.
+- Capstone relevance: All SCF analyses stratified by demographic 
+  combinations must report group sample sizes alongside statistics. 
+  Cells with fewer than a minimum threshold (typically n=30 for 
+  asymptotic inference, or larger for behavioral measures) will be 
+  flagged or aggregated.
 ## Behavioral and Psychological Mechanisms
 
 ### Mental Accounting
