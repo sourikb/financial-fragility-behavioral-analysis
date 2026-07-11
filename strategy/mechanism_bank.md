@@ -88,6 +88,20 @@ reveals more than the average.
   of effect. Plateaus and non-monotonic patterns will be flagged 
   explicitly as candidates for mechanism-based explanation.
 
+### Proxy Measure Validity
+A ranking, classification, or analysis is only as valid as the 
+variable used to construct it. A proxy that imperfectly captures the 
+underlying construct will systematically misclassify cases, even when 
+the computation is flawless.
+- Example: Ranking households by debt-to-income to identify fragility 
+  misclassifies a high-ratio household with large liquid savings as 
+  fragile, and a low-ratio household with zero emergency buffer as 
+  secure.
+- Capstone relevance: The fragility measure must be validated as a 
+  proxy before it is used to rank or target. Multiple candidate 
+  measures will be compared, and the sensitivity of conclusions to 
+  the choice of proxy will be reported explicitly.
+
 ## Economic and Structural Mechanisms
 
 ### Endogeneity
