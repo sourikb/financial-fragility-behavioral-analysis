@@ -102,6 +102,23 @@ the computation is flawless.
   measures will be compared, and the sensitivity of conclusions to 
   the choice of proxy will be reported explicitly.
 
+### Outcome Definition Sensitivity
+The way a binary or categorical outcome is defined determines which 
+cases are classified as positive, and therefore shapes every 
+downstream statistic and model. Conjunctive (AND) definitions produce 
+narrow, conservative classifications; disjunctive (OR) definitions 
+produce broad, inclusive ones. The same underlying data can yield very 
+different prevalence rates depending on this choice.
+- Example: Defining fragility as high debt-to-income AND low savings 
+  flags fewer households than high debt-to-income OR low savings. The 
+  measured fragility rate can swing dramatically based purely on the 
+  definitional logic.
+- Capstone relevance: The fragility outcome definition must be stated 
+  explicitly, justified theoretically, and subjected to sensitivity 
+  analysis across AND-based, OR-based, and index-based alternatives. 
+  The reported prevalence of fragility is meaningless without stating 
+  the definition that produced it.
+
 ## Economic and Structural Mechanisms
 
 ### Endogeneity
