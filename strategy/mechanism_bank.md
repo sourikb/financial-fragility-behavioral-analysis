@@ -119,6 +119,22 @@ different prevalence rates depending on this choice.
   The reported prevalence of fragility is meaningless without stating 
   the definition that produced it.
 
+### Conditioning Direction (Risk vs Composition)
+P(A|B) and P(B|A) are different quantities that answer different
+questions. Reporting only one direction invites misinterpretation, and
+the two can diverge sharply when group sizes differ.
+- Risk: "Of high school households, what share are fragile?"
+  (conditioning on the demographic) — identifies who is most vulnerable.
+- Composition: "Of fragile households, what share are high school
+  educated?" (conditioning on the outcome) — identifies where the volume
+  of the problem sits.
+- Example: A small group may have a 100% fragility rate (highest risk)
+  while comprising only 5% of all fragile households (small share),
+  simply because the group is small.
+- Capstone relevance: Every demographic breakdown in the SCF analysis
+  will report both directions, with raw counts alongside proportions.
+  Subgroups where the two directions diverge are flagged as the most
+  policy-relevant findings.
 ## Economic and Structural Mechanisms
 
 ### Endogeneity
@@ -202,6 +218,20 @@ is itself a signal of fragility.
 - Capstone relevance: The SCF fragility analysis must treat 
   missingness in debt and asset variables as potentially 
   informative, not as a nuisance to be removed.
+
+  ### Base-Rate Neglect in Research Presentation
+The tendency to ignore underlying base rates when interpreting
+conditional probabilities — documented extensively as an individual
+cognitive bias — also operates on researchers and readers interpreting
+tables. A reader shown only P(education | fragile) will often
+mistakenly reason as though they have been shown P(fragile | education).
+- Example: "75% of fragile households have high school education" is
+  frequently misread as "high school households are 75% likely to be
+  fragile" — a different and possibly very wrong claim.
+- Capstone relevance: The same bias the paper studies in households
+  operates on the paper's own readers. Table design must actively
+  prevent it: state the conditioning direction explicitly in every
+  caption, and report both directions where relevant.
 ---
 
 ## Status
