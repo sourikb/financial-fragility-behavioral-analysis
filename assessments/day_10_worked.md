@@ -62,3 +62,37 @@ print(pct)
 ```
 
 ### Output
+
+Overall Fragility Rate: 0.5
+
+fragile Not fragile Fragile
+homeowner
+Non-homeowners 0 5
+Homeowners 5 0
+
+fragile Not fragile Fragile
+homeowner
+Non-homeowners 0.0 100.0
+Homeowners 100.0 0.0
+
+
+### Pattern
+- `df["bool_col"].mean()` → rate of a True/False flag in one line.
+- `pd.crosstab(index, columns)` → two-way count table (raw counts by default).
+- `normalize="index"` → row-conditional shares = P(outcome | row group) = **risk**.
+- `normalize="columns"` → column-conditional shares = P(row group | outcome) = **composition**.
+- `.rename(index=..., columns=...)` → turn True/False labels into publication-ready text.
+
+### Interpretation note
+The row-normalized table answers P(fragile | homeownership) — a *risk*
+statement ("among non-homeowners, X% are fragile"). The keyword is
+*among*. A 0%/100% split is a warning sign (perfect separation), not a
+triumphant finding — in real data it signals a leaked or
+definitionally-overlapping variable, something to distrust and
+investigate.
+
+### Assistance level used
+- Code: produced independently (full solution not needed).
+- Interpretation (Q4): needed sharpening — I first described
+  normalization mechanically; the P(A|B) / risk framing was corrected
+  by Claude. → **concept named by Claude**
